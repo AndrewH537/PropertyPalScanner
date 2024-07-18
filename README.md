@@ -55,20 +55,69 @@ py -m pip install bs4
 
 # Schedule the program
 For task schedule on windows:
-1. Open Task manager
-2. Create a new task
-3. Set the trigger to repeat at the desired interval
-4. Set the action to start a program and point it to your interpreter and main.py
 
-For schedule on cron run:
+1. Create a batch file
 
-```
-crontab -e
-```
+Create a batch file that will run your Python script. This batch file will be used by Task Scheduler.
+
+Open a text editor (e.g., Notepad).
+
+Add the following lines, replacing the paths with the actual paths to your Python executable and main.py script:
 
 ```
-0 * * * * /usr/bin/python3 /path/to/your/main.py
+@echo off
+cd C:\path\to\your\script
+C:\path\to\your\python\python.exe scraper.py
 ```
+
+2. Open Task Scheduler using `Win + R`, type `taskschd.msc`
+
+3. Create a new task
+
+4. General tab -
+
+Name: Provide a name for your task, such as "Property Scraper".
+
+Description: Optionally, provide a description.
+
+Check "Run whether user is logged on or not".
+
+Check "Run with highest privileges".
+
+5. Triggers Tab
+
+Click on New....
+
+Begin the task: On a schedule.
+
+Settings: Daily.
+
+Repeat task every: 1 hour for a duration of: Indefinitely.
+
+Ensure "Enabled" is checked.
+
+Click OK.
+
+6. Actions Tab
+
+Click on New....
+
+Action: Start a program.
+
+Program/script: Click Browse... and navigate to the batch file you created (run_scanner.bat).
+
+Click OK.
+
+7. Settings Tab:
+
+Ensure "Allow task to be run on demand" and "Run task as soon as possible after a scheduled start is missed" are checked.
+Optionally, configure additional settings like stopping the task if it runs longer than a certain duration.
+Click OK.
+
+8. Enter Credentials
+
+
+
 
 # Customisation
 1. Change the targeted URL
