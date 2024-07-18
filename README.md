@@ -45,6 +45,7 @@ For task schedule on windows:
 
 For schedule on cron run:
 crontab -e
+
 0 * * * * /usr/bin/python3 /path/to/your/main.py
 
 # Customisation
