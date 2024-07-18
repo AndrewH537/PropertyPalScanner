@@ -1,5 +1,5 @@
 # PropertyPalScanner
-A web scraper designed to fetch property listings from the PropertyPal website, specifically targeting properties to rent in Belfast. It extracts details such as property addresses and prices and prepares the information to be sent to your personal email.
+A web scraper designed to fetch property listings from the PropertyPal website, specifically targeting properties to rent in Belfast. It extracts details such as property addresses and prices and prepares the information to be sent to your personal email. The idea is to run it every hour and compare values to email any new properties that are posted.
 
 
 # Features
