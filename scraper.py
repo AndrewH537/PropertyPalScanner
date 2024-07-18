@@ -70,7 +70,7 @@ def scrape_properties():
     return property_details
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levellevelname)s - %(message)s')
     properties = scrape_properties()
     logging.info(f"Scraped properties: {properties}")
     print(f"Found properties: {properties}")
