@@ -15,16 +15,22 @@ A web scraper designed to fetch property listings from the PropertyPal website, 
 
 # Installation
 1. Clone the repo
+```
 git clone https://github.com/AndrewH537/PropertyPalScanner.git
+```
 
 2. Install required libraries
+```
 pip install requests beautifulsoup4
+```
 
 Note: if you get any import errors, specifcally for requests and bs4 in scraper.py,
 
 ensure pip is installed and up to date
 
+```
 pip install --upgrade pip
+```
 
 Make sure the correct Python interpreter is selected
 
@@ -39,9 +45,13 @@ To run just the scraper run scraper.py
 
 If you still get import errors for requests and bs4 you may need to run the following;
 
+```
 py -m pip install requests
+```
 
+```
 py -m pip install bs4
+```
 
 # Schedule the program
 For task schedule on windows:
@@ -52,9 +62,13 @@ For task schedule on windows:
 
 For schedule on cron run:
 
+```
 crontab -e
+```
 
+```
 0 * * * * /usr/bin/python3 /path/to/your/main.py
+```
 
 # Customisation
 1. Change the targeted URL
