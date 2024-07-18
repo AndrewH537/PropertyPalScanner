@@ -28,10 +28,24 @@ Make sure the correct Python interpreter is selected
 Windows: Ctrl + Shift + P
 Select required interpreter
 
+To run the script run main.py
+To run just the scraper run scraper.py
+
 
 If you still get import errors for requests and bs4 you may need to run the following;
 py -m pip install requests
 py -m pip install bs4
+
+# Schedule the program
+For task schedule on windows:
+1. Open Task manager
+2. Create a new task
+3. Set the trigger to repeat at the desired interval
+4. Set the action to start a program and point it to your interpreter and main.py
+
+For schedule on cron run:
+crontab -e
+0 * * * * /usr/bin/python3 /path/to/your/main.py
 
 # Customisation
 1. Change the targeted URL
